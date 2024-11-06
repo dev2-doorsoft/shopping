@@ -27,9 +27,18 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text("Meu App Bar"),
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-         
+      body: Container(
+        color: Colors.red,
+        //utiliza toda a tela
+        height: double.infinity,
+        //utiliza toda a tela
+        width: double.infinity,
+        child: ListView(
+        scrollDirection: Axis.horizontal,
+        //alinhamento vertical  
+        //mainAxisAlignment: MainAxisAlignment.center,
+        //alinhamento horizontal
+        //crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           Text("item1"),
           Text("item2"),
@@ -38,6 +47,7 @@ class HomePage extends StatelessWidget {
           Text("item5"),
           Text("item6"),
         ],
+      ),
       )
     );
   }
